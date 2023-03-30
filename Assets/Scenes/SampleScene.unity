@@ -137,7 +137,8 @@ GameObject:
   - component: {fileID: 174647773}
   - component: {fileID: 174647775}
   - component: {fileID: 174647774}
-  m_Layer: 0
+  - component: {fileID: 174647776}
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1109,7 +1110,7 @@ CompositeCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_GeometryType: 0
@@ -1155,6 +1156,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!251 &174647776
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174647769}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -19537,7 +19557,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03237036, y: -0.28054285}
+  m_Offset: {x: 0.0027862787, y: -0.28054285}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -19548,7 +19568,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8994091, y: 1.4389143}
+  m_Size: {x: 0.84024096, y: 1.4389143}
   m_EdgeRadius: 0
 --- !u!50 &1940001097
 Rigidbody2D:
@@ -19652,6 +19672,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 7
   _jump: 14
+  jumbleGround:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!95 &1940001101
 Animator:
   serializedVersion: 5

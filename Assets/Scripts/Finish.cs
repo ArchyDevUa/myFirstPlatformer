@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Finish : MonoBehaviour
 {
     private AudioSource finishSound;
+    private bool isFinish = false;
     void Start()
     {
         finishSound = GetComponent<AudioSource>();
@@ -14,10 +15,11 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name == "Player")
+        if (col.gameObject.name == "Player" && !isFinish)
         {
             finishSound.Play();
             Invoke("FinishLevel",2f);
+            isFinish = true;
         }
         
     }
